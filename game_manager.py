@@ -193,6 +193,7 @@ class GameManager:
 
     def restart_game(self):
         self.game_over = False
+        self.mx_score = 5
         self.start_time = pygame.time.get_ticks()
         self.player_1.reset_score()
         self.player_2.reset_score()
