@@ -6,9 +6,7 @@ def main():
     game = GameManager(window_size=(800, 505))
 
     while True:
-        game.event_handle()
-        game.update()
-        game.display()
+        game.run_loop()
 
 
 if __name__ == '__main__':

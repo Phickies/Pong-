@@ -5,7 +5,7 @@ import math
 class Player(pygame.Rect):
 
     color = (255, 255, 255)
-    speed = 5
+    speed = 6
     score = 0
     is_reset = False
 
@@ -19,10 +19,10 @@ class Player(pygame.Rect):
         pygame.draw.rect(window_screen, self.color, self)
 
     def bounce_in(self, field):
-        buffer = 5
-        if self.top <= field.top:
+        buffer = 3
+        if self.top < field.top:
             self.top = field.top + buffer
-        if self.bottom >= field.bottom:
+        if self.bottom > field.bottom:
             self.bottom = field.bottom - buffer
 
     def add_score(self, number):
