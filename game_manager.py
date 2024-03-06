@@ -62,7 +62,8 @@ class GameManager:
 
         # Setup window
         self.window_size = window_size
-        self.screen = pygame.display.set_mode(window_size)
+        flags = pygame.HWSURFACE | pygame.DOUBLEBUF  # Hardware surface and double buffering
+        self.screen = pygame.display.set_mode(window_size, flags)
 
         # Setup player and initiations
         self.ball = Ball(self.window_size[0]/2, self.window_size[1]/2, 10)
